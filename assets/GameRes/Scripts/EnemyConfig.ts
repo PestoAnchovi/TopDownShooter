@@ -1,0 +1,47 @@
+import { Vec2 } from "cc"
+
+
+export interface IntentConfig {
+    seekWeight: number
+    fleeWeight: number
+    maxSpeed:number
+    maxPredictionTime: number
+    spotPlayerDistance: number
+    lostPlayerDistance: number
+}
+
+export interface MovementConfig {
+    maxSpeed: number
+    maxTurnForce: number
+}
+
+export interface EnemyConfig {
+    intent: IntentConfig
+    moving: MovementConfig
+}
+
+export interface WhiskerConfig {
+    startPos: Vec2,
+    angle: number,
+    length: number
+}
+
+export interface FlockingWeights {
+    seperationWeight: number
+    seperationRadius: number
+    alignmentWeight: number
+    cohesionWeight: number
+}
+
+export interface MovementConfig {
+    maxSpeed: number
+    maxTurnForce: number
+    avoidWeight: number
+    whiskers: WhiskerConfig[]
+    flocking: FlockingWeights
+}
+
+export interface EnemyConfig {
+    intent: IntentConfig
+    moving: MovementConfig
+}
